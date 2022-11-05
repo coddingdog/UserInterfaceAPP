@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "201086736625",
+    "project_id": "echofarm-c9add",
+    "storage_bucket": "echofarm-c9add.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201086736625:android:9912e2aa3bd78e46033150",
+        "android_client_info": {
+          "package_name": "com.echo.echofarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "201086736625-ngms25n363rr7jv6veo51pvl47d546dj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.echo.echofarm",
+            "certificate_hash": "c6ce863c75444dd04ec08ec84e10e4cce25d2c2e"
+          }
+        },
+        {
+          "client_id": "201086736625-4nn9qohiqqsv3gg0ahdfb8huhhteg0kn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWSOoIX_ByC6oeef7vkFOi1d2F1LVc6Gg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "201086736625-4nn9qohiqqsv3gg0ahdfb8huhhteg0kn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
