@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button searchBtn, morePostBtn;
     private ImageButton editPostBtn, chattingBtn, settingBtn;
     //
+    //
     int count = 0;
 
     public MainActivity() {
