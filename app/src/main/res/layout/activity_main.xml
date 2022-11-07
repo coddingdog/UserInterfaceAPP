@@ -15,46 +15,101 @@
         android:hint="검색"
         android:gravity="left|center_vertical"/>
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/idNestedSV"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        tools:context=".MainActivity">
-
-        <LinearLayout
+        android:layout_weight="1">
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/idNestedSV"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            tools:context=".MainActivity">
 
-            <!--recycler view for displaying our list of data
-                and we are making nested scroll for our
-                recycler view as false-->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/idRVCourses"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:nestedScrollingEnabled="false" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <ProgressBar
-                android:id="@+id/idPBLoading"
+                <!--recycler view for displaying our list of data
+                    and we are making nested scroll for our
+                    recycler view as false-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/idRVCourses"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:nestedScrollingEnabled="false" />
+
+                <ProgressBar
+                    android:id="@+id/idPBLoading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/idBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="#AA90C5F9"
+                    android:text="더 많은 게시물 보기"
+                    android:textColor="@color/black"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ScrollView
+            android:id="@+id/inner_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="30dp">
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/camera"
+                    android:scaleType="centerInside"
+                    android:padding="25dp"/>
 
-            <Button
-                android:id="@+id/idBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:background="#AA90C5F9"
-                android:text="더 많은 게시물 보기"
-                android:textColor="@color/black"
-                android:visibility="gone"/>
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사진을 업로드해 주세요."
+                    android:textColor="#F00"/>
 
-    </androidx.core.widget.NestedScrollView>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="게시물 제목"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제목을 입력해 주세요."
+                    android:textColor="#F00"/>
 
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/black_edittext"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:hint="게시물 내용"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="내용을 입력해 주세요."
+                    android:textColor="#F00"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"

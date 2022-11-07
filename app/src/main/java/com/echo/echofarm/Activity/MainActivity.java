@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
+import android.widget.ScrollView;
 
 import com.echo.echofarm.R;
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RecyclerView recyclerView;
     private ProgressBar loadingPB;
     private NestedScrollView nestedSV;
+    private ScrollView innerScrollView;
     private Button searchBtn, morePostBtn;
     private ImageButton editPostBtn, chattingBtn, settingBtn;
 
@@ -52,6 +54,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editPostBtn.setOnClickListener(this);
         chattingBtn.setOnClickListener(this);
         settingBtn.setOnClickListener(this);
+
+        innerScrollView = findViewById(R.id.inner_scrollView);
 
         // post, 스크롤 관련 처리
         recyclerView = findViewById(R.id.idRVCourses);
@@ -89,7 +93,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(view == searchBtn) {
 
         } else if(view == editPostBtn) {
-
+            nestedSV.setVisibility(View.INVISIBLE);
+            innerScrollView.setVisibility(View.VISIBLE);
+            editPostBtn.setImageResource(R.drawable.edit_selected);
         } else if(view == chattingBtn) {
 
         } else if(view == settingBtn) {
