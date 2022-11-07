@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 
@@ -23,9 +24,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RecyclerView recyclerView;
     private ProgressBar loadingPB;
     private NestedScrollView nestedSV;
-    private ScrollView innerScrollView;
+    private ScrollView editPostScrollView;
     private Button searchBtn, morePostBtn;
     private ImageButton editPostBtn, chattingBtn, settingBtn;
+    private LinearLayout mainLayout;
 
     // post에 들어갈 데이터 예제, PostAdapter의 매개변수
     private String[] titles = {"1", "2", "3", "4", "5"};
@@ -55,7 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         chattingBtn.setOnClickListener(this);
         settingBtn.setOnClickListener(this);
 
-        innerScrollView = findViewById(R.id.inner_scrollView);
+        editPostScrollView = findViewById(R.id.editPost_scrollView);
+        mainLayout = findViewById(R.id.main_postLayout);
 
         // post, 스크롤 관련 처리
         recyclerView = findViewById(R.id.idRVCourses);
@@ -93,8 +96,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(view == searchBtn) {
 
         } else if(view == editPostBtn) {
-            nestedSV.setVisibility(View.INVISIBLE);
-            innerScrollView.setVisibility(View.VISIBLE);
+            mainLayout.setVisibility(View.INVISIBLE);
+            editPostScrollView.setVisibility(View.VISIBLE);
             editPostBtn.setImageResource(R.drawable.edit_selected);
         } else if(view == chattingBtn) {
 

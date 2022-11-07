@@ -5,61 +5,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <Button
-        android:id="@+id/searchBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:padding="10dp"
-        android:background="#AA90C5F9"
-        android:hint="검색"
-        android:gravity="left|center_vertical"/>
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        <androidx.core.widget.NestedScrollView
-            android:id="@+id/idNestedSV"
+        <LinearLayout
+            android:id="@+id/main_postLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".MainActivity">
+            android:orientation="vertical">
 
-            <LinearLayout
+            <Button
+                android:id="@+id/searchBtn"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:padding="10dp"
+                android:background="#AA90C5F9"
+                android:hint="검색"
+                android:gravity="left|center_vertical"/>
 
-                <!--recycler view for displaying our list of data
-                    and we are making nested scroll for our
-                    recycler view as false-->
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/idRVCourses"
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/idNestedSV"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                tools:context=".MainActivity">
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:nestedScrollingEnabled="false" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <ProgressBar
-                    android:id="@+id/idPBLoading"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    <!--recycler view for displaying our list of data
+                        and we are making nested scroll for our
+                        recycler view as false-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/idRVCourses"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:nestedScrollingEnabled="false" />
 
-                <Button
-                    android:id="@+id/idBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:background="#AA90C5F9"
-                    android:text="더 많은 게시물 보기"
-                    android:textColor="@color/black"
-                    android:visibility="gone"/>
-            </LinearLayout>
+                    <ProgressBar
+                        android:id="@+id/idPBLoading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
 
-        </androidx.core.widget.NestedScrollView>
+                    <Button
+                        android:id="@+id/idBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="#AA90C5F9"
+                        android:text="더 많은 게시물 보기"
+                        android:textColor="@color/black"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
 
         <ScrollView
-            android:id="@+id/inner_scrollView"
+            android:id="@+id/editPost_scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="invisible">
@@ -108,7 +118,6 @@
                     android:textColor="#F00"/>
             </LinearLayout>
         </ScrollView>
-
     </FrameLayout>
     <LinearLayout
         android:layout_width="match_parent"
