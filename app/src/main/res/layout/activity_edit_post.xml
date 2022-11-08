@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="30dp">
         <ImageButton
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@drawable/black_edittext"
-            android:gravity="left"
+            android:gravity="start"
             android:padding="5dp"
             android:hint="게시물 내용"
             android:layout_marginTop="20dp"/>

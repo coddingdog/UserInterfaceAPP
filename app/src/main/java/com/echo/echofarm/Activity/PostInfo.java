@@ -2,9 +2,9 @@ package com.echo.echofarm.Activity;
 
 public class PostInfo {
 
-    private String title;
-    private String tags;
-    private int imageUri;
+    private final String title;
+    private final String tags;
+    private final int imageUri;
 
     public PostInfo(String title, String tags, int imageUri) {
         this.title = title;

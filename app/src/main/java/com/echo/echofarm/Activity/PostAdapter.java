@@ -16,8 +16,8 @@ import java.util.ArrayList;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
-    private Context context;
-    private ArrayList<PostInfo> postInfoArrayList;
+    private final Context context;
+    private final ArrayList<PostInfo> postInfoArrayList;
 
     public PostAdapter(Context context, ArrayList<PostInfo> postInfoArrayList) {
         this.context = context;
@@ -44,7 +44,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         return postInfoArrayList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView title, tags;
         ImageView postImage;
